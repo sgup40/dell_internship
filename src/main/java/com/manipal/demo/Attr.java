@@ -2,6 +2,10 @@ package com.manipal.demo;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Attr {
 
 	public int getATTR_ID() {
@@ -46,6 +50,8 @@ public class Attr {
 	public void setUpdated_Date(Date updated_Date) {
 		Updated_Date = updated_Date;
 	}
+	
+	@Id
 	private int ATTR_ID;
 	private String identifier;
 	private int attrtypeId;

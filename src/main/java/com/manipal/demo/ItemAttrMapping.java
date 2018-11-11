@@ -2,6 +2,10 @@ package com.manipal.demo;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ItemAttrMapping {
 	public int getItemAttrMappingid() {
 		return itemAttrMappingid;
@@ -51,6 +55,7 @@ public class ItemAttrMapping {
 	public void setUpdated_date(Date updated_date) {
 		this.updated_date = updated_date;
 	}
+	@Id
 	private int itemAttrMappingid;
 	private int  itemId;
 	private int  attrId;
