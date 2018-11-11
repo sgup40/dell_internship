@@ -16,10 +16,9 @@ public class SupplyChainApplication {
 		SpringApplication.run(SupplyChainApplication.class, args);
 	}
 
-	@GetMapping("/test")
+  @GetMapping("/test")
 	@ResponseBody
 	public String test() {
 		return "hello World";
 	}
-
 }
