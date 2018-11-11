@@ -19,4 +19,13 @@ public class AttrService {
 		return attrs;
 	}
 	
+	
+	public List<Attr> deleteAttributes(Integer id)
+	{
+		attrRepository.deleteById(id);
+		List<Attr> attrs= new ArrayList<Attr>();	
+		attrRepository.findAll().forEach(attrs::add);
+		return attrs;
+	}
+
 }
