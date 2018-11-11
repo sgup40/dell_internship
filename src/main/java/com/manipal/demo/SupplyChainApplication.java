@@ -15,18 +15,10 @@ public class SupplyChainApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SupplyChainApplication.class, args);
 	}
-	
-	@GetMapping("/test")
+
+  @GetMapping("/test")
 	@ResponseBody
 	public String test() {
 		return "hello World";
 	}
-	
-	
-	@GetMapping("/ATTR")
-	@ResponseBody
-	public List<Attr> attribute() {
-		return null;
-	}
-	
 }
