@@ -3,6 +3,7 @@ package com.manipal.demo;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,14 +24,14 @@ public class AttrController {
 		return null;
 	}
 
-	@RequestMapping(method = RequestMethod.PUT, value = "/ATTR{id}")
+	@RequestMapping(method = RequestMethod.PUT, value = "/ATTR/{id}")
 	private List<Attr> updateAttribute() {
 		return null;
 	}
 
-	@RequestMapping(method = RequestMethod.DELETE, value = "/ATTR{id}")
-	private List<Attr> deleteAttributes() {
-		return null;
+	@RequestMapping(method = RequestMethod.DELETE, value = "/ATTR/{id}")
+	private List<Attr> deleteAttributes(@PathVariable Integer id) {
+		return attrService.deleteAttributes(id);
 	}
 
 }
