@@ -2,10 +2,15 @@ package com.manipal.demo;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="ATTR")
 public class Attr {
 
 	public int getATTR_ID() {
@@ -52,12 +57,26 @@ public class Attr {
 	}
 	
 	@Id
+	@Column(name="ATTRID")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int ATTR_ID;
+	
+	@Column(name="IDENTIFIER")
 	private String identifier;
+	
+	@Column(name="ATTRTYPEID")
 	private int attrtypeId;
+	
+	@Column(name="FIELD1")
 	private String field1;
+	
+	@Column(name="FIELD2")
 	private String field2;
+	
+	@Column(name="CREATED_DATE")
 	private Date Created_Date;
+	
+	@Column(name="UPDATED_DATE")
 	private Date Updated_Date;
 
 }
