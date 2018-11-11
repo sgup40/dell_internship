@@ -1,7 +1,17 @@
 package com.manipal.demo;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ItemRel {
 	
+	public int getItemRelId() {
+		return itemRelId;
+	}
+	public void setItemRelId(int itemRelId) {
+		this.itemRelId = itemRelId;
+	}
 	public int getItemIdParent() {
 		return itemIdParent;
 	}
@@ -26,6 +36,8 @@ public class ItemRel {
 	public void setField2(String field2) {
 		this.field2 = field2;
 	}
+	@Id
+	private int itemRelId;
 	private int itemIdParent;
 	private int itemIdChild;
 	private String field1;
